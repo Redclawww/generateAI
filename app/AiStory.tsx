@@ -70,7 +70,7 @@ export default function AIStoryGenerator() {
     <div className="container mx-auto p-10 max-w-4xl  rounded-3xl  bg-[#F8F7FF] mt-10 " >
       <h1 className="text-5xl font-bold mb-4 font-montserrat">AI Story Generator</h1>
       <form onSubmit={handleSubmit} className="space-y-6 mt-5">
-        <div className="flex gap-10 ">
+        <div className="flex gap-10 flex-wrap ">
         <div className="flex-1">
           <Label htmlFor="genre" className="font-semibold">Genre</Label>
           <Select onValueChange={setGenre} value={genre}>
@@ -102,7 +102,7 @@ export default function AIStoryGenerator() {
           </Select>
         </div>
         </div>
-        <div className="flex gap-10 ">
+        <div className="flex gap-10 flex-wrap ">
         <div className="flex-1">
           <Label htmlFor="writingStyle" className="font-semibold">Writing Style</Label>
           <Select onValueChange={setWritingStyle} value={writingStyle}>
@@ -132,7 +132,7 @@ export default function AIStoryGenerator() {
           </Select>
         </div>
         </div>
-        <div className="flex gap-10">
+        <div className="flex gap-10 flex-wrap">
         <div className="flex-1">
           <Label htmlFor="creativityLevel" className="font-semibold">Creativity Level</Label>
           <Slider
@@ -195,7 +195,7 @@ export default function AIStoryGenerator() {
         </div>
         {showAdvanced && (
           <div className="space-y-6 mt-5">
-            <div className="flex gap-10">
+            <div className="flex gap-10 flex-wrap">
             <div className="flex-1">
               <Label htmlFor="perspective">Perspective</Label>
               <Select onValueChange={setPerspective} value={perspective}>
@@ -220,7 +220,7 @@ export default function AIStoryGenerator() {
               />
             </div>
             </div>
-            <div className="flex gap-10">
+            <div className="flex gap-10 flex-wrap">
             <div className="flex-1">
               <Label htmlFor="endingType">Story Ending Type</Label>
               <Select onValueChange={setEndingType} value={endingType}>
@@ -246,7 +246,7 @@ export default function AIStoryGenerator() {
               />
             </div>
             </div>
-            <div className="flex gap-10">
+            <div className="flex gap-10 flex-wrap">
             <div className="flex-1">
               <Label htmlFor="moral">Moral or Message</Label>
               <Input
